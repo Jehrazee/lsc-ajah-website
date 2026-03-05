@@ -1,7 +1,23 @@
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
+import InfoBar from "./components/InfoBar"
+import Welcome from "./components/Welcome"
+import FeaturedSermon from "./components/FeaturedSermon"
+import Events from "./components/Events"
+import Newsletter from "./components/Newsletter"
+import Footer from "./components/Footer"
+
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to RCCG Living Seed Church Ajah</h1>
+      <Navbar />
+      <Hero />
+      <InfoBar />
+      <Welcome />
+      <FeaturedSermon />
+      <Events />
+      <Newsletter />
+      <Footer />
     </main>
   )
 }
