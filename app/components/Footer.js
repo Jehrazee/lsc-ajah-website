@@ -27,12 +27,12 @@ export default function Footer() {
         </div>
         <div>
           <h4 style={{color: 'white', fontSize: '16px', fontWeight: 'bold', marginBottom: '16px'}}>Follow Us</h4>
-          <div style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
-            <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '14px'}}>📘 Facebook</a>
-            <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '14px'}}>📸 Instagram</a>
-            <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '14px'}}>▶️ YouTube</a>
-            <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '14px'}}>🐦 Twitter</a>
-          </div>
+          <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '16px'}}>
+  <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>📘</a>
+  <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>📸</a>
+  <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>▶️</a>
+  <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>🐦</a>
+</div>
         </div>
       </div>
       <div style={{borderTop: '1px solid #1a3060', paddingTop: '20px', textAlign: 'center'}}>
