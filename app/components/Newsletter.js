@@ -6,13 +6,13 @@ export default function Newsletter() {
       <p style={{color: '#cccccc', fontSize: '18px', marginBottom: '32px', maxWidth: '500px', margin: '0 auto 32px'}}>
         Sign up to receive updates, announcements and encouragement straight to your inbox.
       </p>
-      <div style={{display: 'flex', justifyContent: 'center', gap: '0', maxWidth: '500px', margin: '0 auto', flexWrap: 'wrap'}}>
+      <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '12px', maxWidth: '500px', margin: '0 auto'}}>
         <input 
           type="email" 
           placeholder="Enter your email address" 
-          style={{flex: '1', minWidth: '250px', padding: '14px 20px', fontSize: '16px', border: 'none', borderRadius: '4px 0 0 4px', outline: 'none'}}
+          style={{width: '100%', padding: '14px 20px', fontSize: '16px', border: 'none', borderRadius: '4px', outline: 'none', boxSizing: 'border-box'}}
         />
-        <button style={{backgroundColor: '#c9a84c', color: '#0a1f44', padding: '14px 28px', border: 'none', borderRadius: '0 4px 4px 0', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer'}}>
+        <button style={{backgroundColor: '#c9a84c', color: '#0a1f44', padding: '14px 28px', border: 'none', borderRadius: '4px', fontWeight: 'bold', fontSize: '16px', cursor: 'pointer', width: '100%'}}>
           Subscribe
         </button>
       </div>
