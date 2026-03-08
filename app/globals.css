@@ -4,3 +4,16 @@
   --color-navy: #0a1f44;
   --color-gold: #c9a84c;
 }
+@media (max-width: 768px) {
+  h1 { font-size: 32px !important; }
+  h2 { font-size: 26px !important; }
+  section { padding: 40px 16px !important; }
+  
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  div[style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+}
