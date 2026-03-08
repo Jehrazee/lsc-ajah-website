@@ -10,6 +10,7 @@ export default function Navbar() {
         <li><a href="/about" style={{color: 'white', textDecoration: 'none'}}>About</a></li>
         <li><a href="/sermons" style={{color: 'white', textDecoration: 'none'}}>Sermons</a></li>
         <li><a href="/events" style={{color: 'white', textDecoration: 'none'}}>Events</a></li>
+        <li><a href="/prayer" style={{color: 'white', textDecoration: 'none'}}>Prayer</a></li>
         <li><a href="/give" style={{color: 'white', textDecoration: 'none'}}>Give</a></li>
         <li><a href="/contact" style={{color: 'white', textDecoration: 'none'}}>Contact</a></li>
       </ul>
