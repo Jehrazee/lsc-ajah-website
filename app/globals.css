@@ -46,3 +46,20 @@ section:nth-child(7) { animation-delay: 1.3s; }
     flex-wrap: wrap !important;
   }
 }
+
+
+/* Hover effects */
+a:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+button {
+  transition: all 0.2s ease;
+}
