@@ -1,8 +1,16 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [showName, setShowName] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowName(prev => !prev)
+    }, 15000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <>
@@ -22,9 +30,21 @@ export default function Navbar() {
 
       <nav style={{backgroundColor: '#0a1f44', color: 'white', padding: '16px 24px'}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-          <div>
-            <h1 style={{color: '#c9a84c', fontSize: '20px', fontWeight: 'bold', margin: 0}}>LSC Ajah</h1>
-            <p style={{color: '#cccccc', fontSize: '12px', margin: 0}}>RCCG Living Seed Church</p>
+
+          {/* Animated Logo */}
+          <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+            <img src="/rccg.jpg" alt="RCCG Logo" style={{height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover'}} />
+            <div style={{
+              overflow: 'hidden',
+              maxWidth: showName ? '260px' : '0px',
+              opacity: showName ? 1 : 0,
+              transition: 'max-width 0.8s ease, opacity 0.8s ease',
+              whiteSpace: 'nowrap'
+            }}>
+              <p style={{color: '#c9a84c', fontSize: '13px', fontWeight: 'bold', margin: 0}}>RCCG Living Seed Church Ajah</p>
+              <p style={{color: '#cccccc', fontSize: '11px', margin: 0}}>Ajah, Lagos</p>
+            </div>
+            <img src="/lsc.jpg" alt="LSC Logo" style={{height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover'}} />
           </div>
 
           <ul className="nav-links" style={{gap: '24px', listStyle: 'none', fontSize: '14px', margin: 0, padding: 0}}>

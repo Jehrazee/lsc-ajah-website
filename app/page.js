@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+import WelcomeBanner from "./components/WelcomeBanner"
 import Hero from "./components/Hero"
 import InfoBar from "./components/InfoBar"
 import Welcome from "./components/Welcome"
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
+      <WelcomeBanner />
       <Hero />
       <InfoBar />
       <Welcome />

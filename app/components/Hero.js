@@ -1,10 +1,30 @@
+"use client"
+import { useState, useEffect } from "react"
+
 export default function Hero() {
+  const [showName, setShowName] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowName(prev => !prev)
+    }, 15000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
-    <section style={{backgroundColor: '#0a1f44', color: 'white', padding: '80px 24px', textAlign: 'center'}}>
-      <h1 style={{fontSize: '48px', fontWeight: 'bold', marginBottom: '16px', lineHeight: '1.2'}}>
-        Welcome to <span style={{color: '#c9a84c'}}>Living Seed Church</span>
-      </h1>
-      <p style={{fontSize: '20px', color: '#cccccc', marginBottom: '32px', maxWidth: '600px', margin: '0 auto 32px'}}>
+    <section style={{backgroundColor: '#0a1f44', color: 'white', padding: '120px 24px', textAlign: 'center'}}>
+      <div style={{transition: 'opacity 0.8s ease', opacity: showName ? 1 : 0, minHeight: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+        {showName ? (
+          <h1 style={{fontSize: '52px', fontWeight: 'bold', lineHeight: '1.2', margin: 0}}>
+            Welcome to <span style={{color: '#c9a84c'}}>Living Seed Church</span>
+          </h1>
+        ) : (
+          <h1 style={{fontSize: '52px', fontWeight: 'bold', lineHeight: '1.2', margin: 0}}>
+            <span style={{color: '#c9a84c'}}>RCCG</span> Living Seed Church <span style={{color: '#c9a84c'}}>Ajah</span>
+          </h1>
+        )}
+      </div>
+      <p style={{fontSize: '20px', color: '#cccccc', marginBottom: '32px', maxWidth: '600px', margin: '24px auto 32px'}}>
         A place of grace, growth and genuine worship
       </p>
       <div style={{display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap'}}>
