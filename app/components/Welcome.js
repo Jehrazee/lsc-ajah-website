@@ -9,15 +9,15 @@ export default function Welcome() {
         />
       </div>
       <div style={{flex: '2', minWidth: '280px'}}>
-        <p style={{color: '#c9a84c', fontWeight: 'bold', marginBottom: '8px', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '2px'}}>A Message from</p>
-        <h2 style={{fontSize: '36px', fontWeight: 'bold', color: '#0a1f44', marginBottom: '20px'}}>Our Pastor</h2>
-        <p style={{fontSize: '18px', lineHeight: '1.8', color: '#444444', marginBottom: '24px'}}>
+        <p style={{color: '#c9a84c', fontWeight: '500', marginBottom: '8px', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', fontFamily: 'Montserrat, sans-serif'}}>A Message from</p>
+        <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '20px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px', lineHeight: '1.2'}}>Our Pastor</h2>
+        <p style={{fontSize: '16px', lineHeight: '1.9', color: '#444444', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>
           Welcome to RCCG Living Seed Church Ajah. We are a family 
           built on the Word of God, committed to raising disciples 
           and transforming lives. Whether you are joining us for the 
           first time or have been with us for years — you are home.
         </p>
-        <a href="/about" style={{backgroundColor: '#0a1f44', color: 'white', padding: '12px 28px', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', fontSize: '15px'}}>
+        <a href="/about" style={{backgroundColor: '#0a1f44', color: 'white', padding: '12px 28px', borderRadius: '4px', textDecoration: 'none', fontWeight: '500', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
           Meet Our Pastor
         </a>
       </div>

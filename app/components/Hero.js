@@ -111,7 +111,7 @@ export default function Hero() {
         transition: 'opacity 0.8s ease',
         opacity: fade ? 1 : 0
       }}>
-        <h1 style={{fontSize: '52px', fontWeight: 'bold', color: 'white', marginBottom: '16px', lineHeight: '1.2'}}>
+        <h1 style={{fontSize: '52px', fontWeight: '300', color: 'white', marginBottom: '16px', lineHeight: '1.2', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>
           <span style={{color: '#c9a84c'}}>{slide.heading}</span>
         </h1>
         <p style={{fontSize: '20px', color: '#cccccc', margin: '0 auto 32px', maxWidth: '600px'}}>
