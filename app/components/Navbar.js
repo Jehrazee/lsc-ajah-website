@@ -3,8 +3,14 @@ import { useState, useEffect } from "react"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showName, setShowName] = useState(true)
+const [showName, setShowName] = useState(true)
+const [scrolled, setScrolled] = useState(false)
 
+useEffect(() => {
+  const handleScroll = () => setScrolled(window.scrollY > 60)
+  window.addEventListener('scroll', handleScroll)
+  return () => window.removeEventListener('scroll', handleScroll)
+}, [])
   useEffect(() => {
     const interval = setInterval(() => {
       setShowName(prev => !prev)
@@ -28,7 +34,19 @@ export default function Navbar() {
         }
       `}</style>
 
-      <nav style={{backgroundColor: '#0a1f44', color: 'white', padding: '16px 24px'}}>
+     <nav style={{
+  backgroundColor: scrolled ? '#0a1f44' : 'transparent', 
+  color: 'white', 
+  padding: '16px 24px',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  right: 0,
+  zIndex: 100,
+  boxShadow: scrolled ? '0 4px 30px rgba(0,0,0,0.6)' : 'none',
+  borderBottom: scrolled ? '2px solid rgba(201,168,76,0.4)' : 'none',
+  transition: 'all 0.4s ease'
+}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 
           {/* Animated Logo */}
