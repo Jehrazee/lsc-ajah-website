@@ -8,7 +8,7 @@ export default function Navbar() {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowName(prev => !prev)
-    }, 15000)
+    }, 6000)
     return () => clearInterval(interval)
   }, [])
 
