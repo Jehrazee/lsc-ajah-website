@@ -1,7 +1,6 @@
-"use client"
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { useEffect, useState } from "react";
+import BackToTopWrapper from "./components/BackToTopWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,40 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-function BackToTop() {
-  const [visible, setVisible] = useState(false)
+export const metadata = {
+  title: {
+    default: "RCCG Living Seed Church Ajah | A Place of Grace, Growth & Worship",
+    template: "%s | RCCG Living Seed Church Ajah"
+  },
+  description: "Welcome to RCCG Living Seed Church Ajah — a family built on the Word of God, committed to raising disciples and transforming lives in Ajah, Lagos, Nigeria.",
+  keywords: ["RCCG", "Living Seed Church", "Ajah", "Lagos", "Church", "Nigeria", "RCCG Ajah", "Christian Church Lagos"],
+  openGraph: {
+    title: "RCCG Living Seed Church Ajah",
+    description: "A place of grace, growth and genuine worship in Ajah, Lagos, Nigeria.",
+    url: "https://lsc-ajah-website.vercel.app",
+    siteName: "RCCG Living Seed Church Ajah",
+    locale: "en_NG",
+    type: "website",
+  },
+}
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setVisible(window.scrollY > 300)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  return visible ? (
-    <button
-      onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-      style={{
-        position: 'fixed',
-        bottom: '32px',
-        right: '32px',
-        backgroundColor: '#c9a84c',
-        color: '#0a1f44',
-        border: 'none',
-        borderRadius: '50%',
-        width: '48px',
-        height: '48px',
-        fontSize: '22px',
-        cursor: 'pointer',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-        zIndex: 1000,
-        transition: 'opacity 0.3s ease',
-      }}
-    >
-      ↑
-    </button>
-  ) : null
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({ children }) {
@@ -54,7 +39,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
-        <BackToTop />
+        <BackToTopWrapper />
       </body>
     </html>
   );

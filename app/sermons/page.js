@@ -1,6 +1,11 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
+export const metadata = {
+  title: "Sermons",
+  description: "Watch and listen to sermons from RCCG Living Seed Church Ajah. Be inspired, equipped and transformed by the Word of God.",
+}
+
 const sermons = [
   {id: 1, title: "Walking in Faith", preacher: "Pastor [Name]", date: "2 March 2026", series: "Faith Series", duration: "45 mins"},
   {id: 2, title: "The Power of Prayer", preacher: "Pastor [Name]", date: "23 Feb 2026", series: "Prayer Series", duration: "52 mins"},
@@ -17,17 +22,17 @@ export default function Sermons() {
 
       {/* Hero */}
       <section style={{backgroundColor: '#0a1f44', color: 'white', padding: '80px 24px', textAlign: 'center'}}>
-        <p style={{color: '#c9a84c', fontWeight: 'bold', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px'}}>Media</p>
-        <h1 style={{fontSize: '48px', fontWeight: 'bold'}}>Sermons</h1>
-        <p style={{color: '#cccccc', marginTop: '16px', fontSize: '18px'}}>Be inspired, equipped and transformed by the Word of God</p>
+        <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>Media</p>
+        <h1 style={{fontSize: '52px', fontWeight: '300', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Sermons</h1>
+        <p style={{color: '#cccccc', marginTop: '16px', fontSize: '15px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '1px'}}>Be inspired, equipped and transformed by the Word of God</p>
       </section>
 
       {/* Filter Bar */}
       <section style={{backgroundColor: '#f5f5f5', padding: '24px', borderBottom: '1px solid #e5e5e5'}}>
         <div style={{maxWidth: '1100px', margin: '0 auto', display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center'}}>
-          <span style={{color: '#0a1f44', fontWeight: 'bold'}}>Filter by:</span>
+          <span style={{color: '#0a1f44', fontWeight: '500', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Filter by:</span>
           {['All', 'Faith Series', 'Prayer Series', 'Grace Series', 'Purpose Series'].map(filter => (
-            <button key={filter} style={{padding: '8px 20px', border: '2px solid #0a1f44', borderRadius: '24px', backgroundColor: filter === 'All' ? '#0a1f44' : 'white', color: filter === 'All' ? 'white' : '#0a1f44', cursor: 'pointer', fontWeight: 'bold', fontSize: '14px'}}>
+            <button key={filter} style={{padding: '8px 20px', border: '2px solid #0a1f44', borderRadius: '24px', backgroundColor: filter === 'All' ? '#0a1f44' : 'white', color: filter === 'All' ? 'white' : '#0a1f44', cursor: 'pointer', fontWeight: '500', fontSize: '11px', letterSpacing: '1px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
               {filter}
             </button>
           ))}
@@ -47,12 +52,12 @@ export default function Sermons() {
               </div>
               {/* Details */}
               <div style={{padding: '24px'}}>
-                <span style={{backgroundColor: '#f0e8d5', color: '#c9a84c', fontSize: '12px', fontWeight: 'bold', padding: '4px 10px', borderRadius: '12px'}}>{sermon.series}</span>
-                <h3 style={{color: '#0a1f44', fontSize: '20px', fontWeight: 'bold', margin: '12px 0 8px'}}>{sermon.title}</h3>
-                <p style={{color: '#666', fontSize: '14px', marginBottom: '4px'}}>🎤 {sermon.preacher}</p>
-                <p style={{color: '#666', fontSize: '14px', marginBottom: '4px'}}>📅 {sermon.date}</p>
-                <p style={{color: '#666', fontSize: '14px', marginBottom: '20px'}}>⏱ {sermon.duration}</p>
-                <button style={{width: '100%', backgroundColor: '#0a1f44', color: 'white', padding: '12px', border: 'none', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer', fontSize: '15px'}}>
+                <span style={{backgroundColor: '#f0e8d5', color: '#c9a84c', fontSize: '11px', fontWeight: '500', padding: '4px 10px', borderRadius: '12px', letterSpacing: '1px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>{sermon.series}</span>
+                <h3 style={{color: '#0a1f44', fontSize: '24px', fontWeight: '300', margin: '12px 0 8px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '1px'}}>{sermon.title}</h3>
+                <p style={{color: '#666', fontSize: '13px', marginBottom: '4px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>🎤 {sermon.preacher}</p>
+                <p style={{color: '#666', fontSize: '13px', marginBottom: '4px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>📅 {sermon.date}</p>
+                <p style={{color: '#666', fontSize: '13px', marginBottom: '20px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>⏱ {sermon.duration}</p>
+                <button style={{width: '100%', backgroundColor: '#0a1f44', color: 'white', padding: '12px', border: 'none', borderRadius: '4px', fontWeight: '500', cursor: 'pointer', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
                   ▶ Watch Sermon
                 </button>
               </div>

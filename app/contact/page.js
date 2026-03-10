@@ -1,6 +1,11 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 
+export const metadata = {
+  title: "Contact Us",
+  description: "Get in touch with RCCG Living Seed Church Ajah. We would love to hear from you. Find our address, phone number and service times.",
+}
+
 export default function Contact() {
   return (
     <main>
@@ -8,9 +13,9 @@ export default function Contact() {
 
       {/* Hero */}
       <section style={{backgroundColor: '#0a1f44', color: 'white', padding: '80px 24px', textAlign: 'center'}}>
-        <p style={{color: '#c9a84c', fontWeight: 'bold', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px'}}>Get In Touch</p>
-        <h1 style={{fontSize: '48px', fontWeight: 'bold'}}>Contact Us</h1>
-        <p style={{color: '#cccccc', marginTop: '16px', fontSize: '18px'}}>We would love to hear from you</p>
+        <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>Get In Touch</p>
+        <h1 style={{fontSize: '52px', fontWeight: '300', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Contact Us</h1>
+        <p style={{color: '#cccccc', marginTop: '16px', fontSize: '15px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '1px'}}>We would love to hear from you</p>
       </section>
 
       {/* Contact Grid */}
@@ -19,36 +24,36 @@ export default function Contact() {
           
           {/* Contact Form */}
           <div>
-            <h2 style={{color: '#0a1f44', fontSize: '28px', fontWeight: 'bold', marginBottom: '24px'}}>Send Us a Message</h2>
+            <h2 style={{color: '#0a1f44', fontSize: '36px', fontWeight: '300', marginBottom: '24px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Send Us a Message</h2>
             
             <div style={{marginBottom: '20px'}}>
-              <label style={{display: 'block', color: '#0a1f44', fontWeight: 'bold', marginBottom: '8px', fontSize: '14px'}}>Full Name</label>
-              <input type="text" placeholder="Your full name" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '16px', boxSizing: 'border-box', outline: 'none'}} />
+              <label style={{display: 'block', color: '#0a1f44', fontWeight: '500', marginBottom: '8px', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Full Name</label>
+              <input type="text" placeholder="Your full name" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '14px', boxSizing: 'border-box', outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}} />
             </div>
 
             <div style={{marginBottom: '20px'}}>
-              <label style={{display: 'block', color: '#0a1f44', fontWeight: 'bold', marginBottom: '8px', fontSize: '14px'}}>Email Address</label>
-              <input type="email" placeholder="Your email address" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '16px', boxSizing: 'border-box', outline: 'none'}} />
+              <label style={{display: 'block', color: '#0a1f44', fontWeight: '500', marginBottom: '8px', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Email Address</label>
+              <input type="email" placeholder="Your email address" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '14px', boxSizing: 'border-box', outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}} />
             </div>
 
             <div style={{marginBottom: '20px'}}>
-              <label style={{display: 'block', color: '#0a1f44', fontWeight: 'bold', marginBottom: '8px', fontSize: '14px'}}>Subject</label>
-              <input type="text" placeholder="What is this about?" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '16px', boxSizing: 'border-box', outline: 'none'}} />
+              <label style={{display: 'block', color: '#0a1f44', fontWeight: '500', marginBottom: '8px', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Subject</label>
+              <input type="text" placeholder="What is this about?" style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '14px', boxSizing: 'border-box', outline: 'none', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}} />
             </div>
 
             <div style={{marginBottom: '24px'}}>
-              <label style={{display: 'block', color: '#0a1f44', fontWeight: 'bold', marginBottom: '8px', fontSize: '14px'}}>Message</label>
-              <textarea placeholder="Your message..." rows={6} style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '16px', boxSizing: 'border-box', outline: 'none', resize: 'vertical'}} />
+              <label style={{display: 'block', color: '#0a1f44', fontWeight: '500', marginBottom: '8px', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Message</label>
+              <textarea placeholder="Your message..." rows={6} style={{width: '100%', padding: '14px 16px', border: '1px solid #ddd', borderRadius: '4px', fontSize: '14px', boxSizing: 'border-box', outline: 'none', resize: 'vertical', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}} />
             </div>
 
-            <button style={{width: '100%', backgroundColor: '#0a1f44', color: 'white', padding: '16px', border: 'none', borderRadius: '4px', fontWeight: 'bold', fontSize: '18px', cursor: 'pointer'}}>
+            <button style={{width: '100%', backgroundColor: '#0a1f44', color: 'white', padding: '16px', border: 'none', borderRadius: '4px', fontWeight: '500', fontSize: '11px', cursor: 'pointer', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
               Send Message
             </button>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h2 style={{color: '#0a1f44', fontSize: '28px', fontWeight: 'bold', marginBottom: '24px'}}>Find Us</h2>
+            <h2 style={{color: '#0a1f44', fontSize: '36px', fontWeight: '300', marginBottom: '24px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Find Us</h2>
             
             <div style={{marginBottom: '32px'}}>
               {[
@@ -62,8 +67,8 @@ export default function Contact() {
                 <div key={item.label} style={{display: 'flex', gap: '16px', marginBottom: '20px', alignItems: 'flex-start'}}>
                   <span style={{fontSize: '24px'}}>{item.icon}</span>
                   <div>
-                    <p style={{color: '#0a1f44', fontWeight: 'bold', fontSize: '14px', marginBottom: '2px'}}>{item.label}</p>
-                    <p style={{color: '#555', fontSize: '15px'}}>{item.value}</p>
+                    <p style={{color: '#0a1f44', fontWeight: '500', fontSize: '11px', marginBottom: '2px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>{item.label}</p>
+                    <p style={{color: '#555', fontSize: '14px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>{item.value}</p>
                   </div>
                 </div>
               ))}
@@ -71,7 +76,7 @@ export default function Contact() {
 
             {/* Map Placeholder */}
             <div style={{backgroundColor: '#e5e5e5', height: '250px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <p style={{color: '#888', fontSize: '16px'}}>📍 Google Map will appear here</p>
+              <p style={{color: '#888', fontSize: '14px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>📍 Google Map will appear here</p>
             </div>
           </div>
 
@@ -80,16 +85,16 @@ export default function Contact() {
 
       {/* Social Links */}
       <section style={{backgroundColor: '#f5f5f5', padding: '60px 24px', textAlign: 'center'}}>
-        <p style={{color: '#c9a84c', fontWeight: 'bold', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '8px'}}>Follow Us</p>
-        <h2 style={{fontSize: '32px', fontWeight: 'bold', color: '#0a1f44', marginBottom: '32px'}}>Connect With Us Online</h2>
+        <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>Follow Us</p>
+        <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '32px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Connect With Us Online</h2>
         <div style={{display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap'}}>
           {[
-            {icon: '📘', label: 'Facebook', color: '#1877f2'},
-            {icon: '📸', label: 'Instagram', color: '#e1306c'},
-            {icon: '▶️', label: 'YouTube', color: '#ff0000'},
-            {icon: '🐦', label: 'Twitter', color: '#1da1f2'},
+            {icon: '📘', label: 'Facebook'},
+            {icon: '📸', label: 'Instagram'},
+            {icon: '▶️', label: 'YouTube'},
+            {icon: '🐦', label: 'Twitter'},
           ].map(item => (
-            <a key={item.label} href="#" style={{display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: 'white', padding: '14px 28px', borderRadius: '4px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textDecoration: 'none', color: '#0a1f44', fontWeight: 'bold', fontSize: '16px'}}>
+            <a key={item.label} href="#" style={{display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: 'white', padding: '14px 28px', borderRadius: '4px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)', textDecoration: 'none', color: '#0a1f44', fontWeight: '500', fontSize: '12px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
               <span style={{fontSize: '24px'}}>{item.icon}</span>
               {item.label}
             </a>
