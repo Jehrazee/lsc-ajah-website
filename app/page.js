@@ -6,6 +6,7 @@ import Welcome from "./components/Welcome"
 import FeaturedSermon from "./components/FeaturedSermon"
 import Events from "./components/Events"
 import Testimonies from "./components/Testimonies"
+import Gallery from "./components/Gallery"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
 
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturedSermon />
       <Events />
       <Testimonies />
+      <Gallery />
       <Newsletter />
       <Footer />
     </main>
