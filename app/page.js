@@ -5,21 +5,23 @@ import InfoBar from "./components/InfoBar"
 import Welcome from "./components/Welcome"
 import FeaturedSermon from "./components/FeaturedSermon"
 import Events from "./components/Events"
+import Testimonies from "./components/Testimonies"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
 
 export default function Home() {
   return (
     <main>
-  <Navbar />
-  <Hero />
-  <WelcomeBanner />
-  <InfoBar />
-  <Welcome />
-  <FeaturedSermon />
-  <Events />
-  <Newsletter />
-  <Footer />
-</main>
+      <Navbar />
+      <Hero />
+      <WelcomeBanner />
+      <InfoBar />
+      <Welcome />
+      <FeaturedSermon />
+      <Events />
+      <Testimonies />
+      <Newsletter />
+      <Footer />
+    </main>
   )
 }
