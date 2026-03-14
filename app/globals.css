@@ -11,6 +11,10 @@
   --sans: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--sans);
   font-weight: 300;
