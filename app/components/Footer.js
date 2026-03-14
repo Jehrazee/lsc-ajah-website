@@ -62,14 +62,22 @@ export default function Footer() {
           <p style={{color: '#cccccc', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>🕕 Fridays: 6:00pm</p>
         </div>
       </div>
-      <div style={{borderTop: '1px solid #1a3060', paddingTop: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px'}}>
+      <div style={{borderTop: '1px solid #1a3060', paddingTop: '20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', textAlign: 'center'}}>
         <p style={{color: '#888888', fontSize: '12px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '1px'}}>© 2026 RCCG Living Seed Church Ajah. All rights reserved.</p>
-        <div style={{display: 'flex', gap: '16px'}}>
-          <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>📘</a>
-          <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>📸</a>
-          <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>▶️</a>
-          <a href="#" style={{color: '#cccccc', textDecoration: 'none', fontSize: '24px'}}>🐦</a>
-        </div>
+        <div style={{display: 'flex', gap: '12px'}}>
+  <a href="#" style={{width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#1877f2', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+  </a>
+  <a href="#" style={{width: '36px', height: '36px', borderRadius: '50%', background: 'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+  </a>
+  <a href="#" style={{width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#ff0000', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#ff0000"/></svg>
+  </a>
+  <a href="#" style={{width: '36px', height: '36px', borderRadius: '50%', backgroundColor: '#000000', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none'}}>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+</div>
       </div>
     </footer>
   )
