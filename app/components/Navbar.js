@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [showName, setShowName] = useState(true)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
 
@@ -12,13 +11,6 @@ export default function Navbar() {
     const handleScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowName(prev => !prev)
-    }, 6000)
-    return () => clearInterval(interval)
   }, [])
 
   const isActive = (href) => {
@@ -33,18 +25,34 @@ export default function Navbar() {
         .watch-live-btn { display: inline-block; }
         .hamburger-btn { display: none; }
         .mobile-nav { display: none; }
-        
+
         @media (max-width: 768px) {
           .nav-links { display: none !important; }
           .watch-live-btn { display: none !important; }
           .hamburger-btn { display: block !important; }
           .mobile-nav { display: block; }
         }
+
+        @keyframes goldGlow {
+  0%   { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
+  50%  { box-shadow: 0 0 25px 10px rgba(201,168,76,1), 0 0 60px 20px rgba(201,168,76,0.5); }
+  100% { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
+}
+
+.lsc-logo {
+  animation: goldGlow 2s ease-in-out infinite;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+        .lsc-logo:hover {
+          transform: scale(1.08);
+        }
       `}</style>
 
       <nav style={{
-        backgroundColor: scrolled ? '#0a1f44' : 'transparent', 
-        color: 'white', 
+        backgroundColor: scrolled ? '#0a1f44' : 'transparent',
+        color: 'white',
         padding: '16px 24px',
         position: 'fixed',
         top: 0,
@@ -57,22 +65,21 @@ export default function Navbar() {
       }}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
 
-          {/* Animated Logo */}
-          <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-            <img src="/rccg.jpg" alt="RCCG Logo" style={{height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover'}} />
-            <div style={{
-              overflow: 'hidden',
-              maxWidth: showName ? '260px' : '0px',
-              opacity: showName ? 1 : 0,
-              transition: 'max-width 0.8s ease, opacity 0.8s ease',
-              whiteSpace: 'nowrap'
-            }}>
-              <p style={{color: '#c9a84c', fontSize: '13px', fontWeight: 'bold', margin: 0}}>RCCG Living Seed Church Ajah</p>
-              <p style={{color: '#cccccc', fontSize: '11px', margin: 0}}>Ajah, Lagos</p>
+          {/* Logo */}
+          <a href="/" style={{textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '12px'}}>
+            <img
+              src="/lsc.jpg"
+              alt="Living Seed Church Ajah"
+              className="lsc-logo"
+              style={{height: '48px', width: '48px', objectFit: 'cover'}}
+            />
+            <div>
+              <p style={{color: '#c9a84c', fontSize: '13px', fontWeight: 'bold', margin: 0, fontFamily: 'Montserrat, sans-serif', letterSpacing: '1px'}}>Living Seed Church</p>
+              <p style={{color: '#cccccc', fontSize: '11px', margin: 0, fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '1px'}}>Ajah, Lagos</p>
             </div>
-            <img src="/lsc.jpg" alt="LSC Logo" style={{height: '48px', width: '48px', borderRadius: '50%', objectFit: 'cover'}} />
-          </div>
+          </a>
 
+          {/* Desktop Nav */}
           <ul className="nav-links" style={{gap: '24px', listStyle: 'none', fontSize: '14px', margin: 0, padding: 0}}>
             {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/give', 'Give'], ['/connect', 'Connect'], ['/contact', 'Contact']].map(([href, label]) => (
               <li key={href} style={{position: 'relative'}}>
@@ -111,6 +118,7 @@ export default function Navbar() {
           </div>
         </div>
 
+        {/* Mobile Nav */}
         {menuOpen && (
           <div className="mobile-nav">
             <ul style={{listStyle: 'none', padding: '16px 0 0', margin: 0, display: 'flex', flexDirection: 'column', gap: '16px'}}>
