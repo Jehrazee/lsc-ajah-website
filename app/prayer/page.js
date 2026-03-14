@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Link from "next/link"
 
 export const metadata = {
   title: "Prayer Requests",
@@ -79,6 +80,55 @@ export default function Prayer() {
               <p style={{color: 'white', fontSize: '18px', fontWeight: '500', fontFamily: 'Montserrat, sans-serif'}}>🕐 {item.time}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* More Ways We Can Help */}
+      <section style={{backgroundColor: '#f5f5f5', padding: '80px 24px', textAlign: 'center'}}>
+        <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>We Are Here For You</p>
+        <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>More Ways We Can Help</h2>
+        <p style={{color: '#555', fontSize: '14px', lineHeight: '1.8', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', maxWidth: '520px', margin: '0 auto 48px'}}>
+          Whatever you are going through, Living Seed Church is here to walk with you.
+        </p>
+
+        <div style={{display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap', maxWidth: '960px', margin: '0 auto'}}>
+
+          {/* Testimonies */}
+          <Link href="/testimonies" style={{textDecoration: 'none', flex: '1', minWidth: '240px', maxWidth: '280px'}}>
+            <div style={{backgroundColor: 'white', borderRadius: '8px', padding: '40px 32px', boxShadow: '0 2px 16px rgba(0,0,0,0.07)', height: '100%', borderTop: '4px solid #c9a84c', cursor: 'pointer'}}>
+              <div style={{fontSize: '36px', marginBottom: '16px'}}>🙌</div>
+              <h3 style={{color: '#0a1f44', fontSize: '22px', fontWeight: '300', marginBottom: '12px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '1px'}}>Share a Testimony</h3>
+              <p style={{color: '#555', fontSize: '13px', lineHeight: '1.8', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', marginBottom: '24px'}}>
+                Has God done something wonderful in your life? Share it and encourage the body of Christ.
+              </p>
+              <span style={{color: '#c9a84c', fontSize: '11px', fontWeight: '500', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Share Now →</span>
+            </div>
+          </Link>
+
+          {/* Counselling */}
+          <Link href="/counselling" style={{textDecoration: 'none', flex: '1', minWidth: '240px', maxWidth: '280px'}}>
+            <div style={{backgroundColor: 'white', borderRadius: '8px', padding: '40px 32px', boxShadow: '0 2px 16px rgba(0,0,0,0.07)', height: '100%', borderTop: '4px solid #c9a84c', cursor: 'pointer'}}>
+              <div style={{fontSize: '36px', marginBottom: '16px'}}>💬</div>
+              <h3 style={{color: '#0a1f44', fontSize: '22px', fontWeight: '300', marginBottom: '12px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '1px'}}>Request Counselling</h3>
+              <p style={{color: '#555', fontSize: '13px', lineHeight: '1.8', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', marginBottom: '24px'}}>
+                Speak confidentially with a pastor. We are here to listen, guide and support you.
+              </p>
+              <span style={{color: '#c9a84c', fontSize: '11px', fontWeight: '500', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Book a Session →</span>
+            </div>
+          </Link>
+
+          {/* Connect Hub */}
+          <Link href="/connect" style={{textDecoration: 'none', flex: '1', minWidth: '240px', maxWidth: '280px'}}>
+            <div style={{backgroundColor: 'white', borderRadius: '8px', padding: '40px 32px', boxShadow: '0 2px 16px rgba(0,0,0,0.07)', height: '100%', borderTop: '4px solid #c9a84c', cursor: 'pointer'}}>
+              <div style={{fontSize: '36px', marginBottom: '16px'}}>🤝</div>
+              <h3 style={{color: '#0a1f44', fontSize: '22px', fontWeight: '300', marginBottom: '12px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '1px'}}>Connect With Us</h3>
+              <p style={{color: '#555', fontSize: '13px', lineHeight: '1.8', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', marginBottom: '24px'}}>
+                Explore all the ways to get involved, get support and grow with our church family.
+              </p>
+              <span style={{color: '#c9a84c', fontSize: '11px', fontWeight: '500', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>Explore →</span>
+            </div>
+          </Link>
+
         </div>
       </section>
 

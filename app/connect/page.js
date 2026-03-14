@@ -26,7 +26,7 @@ export default function Connect() {
 
           {/* Prayer */}
           <a href="/prayer" style={{textDecoration: 'none'}}>
-            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', cursor: 'pointer'}}>
               <div style={{backgroundColor: '#0a1f44', padding: '40px 24px', textAlign: 'center'}}>
                 <span style={{fontSize: '56px'}}>🙏</span>
                 <h2 style={{color: '#c9a84c', fontSize: '28px', fontWeight: '300', marginTop: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Prayer Request</h2>
@@ -42,7 +42,7 @@ export default function Connect() {
 
           {/* Testimonies */}
           <a href="/testimonies" style={{textDecoration: 'none'}}>
-            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', cursor: 'pointer'}}>
               <div style={{backgroundColor: '#c9a84c', padding: '40px 24px', textAlign: 'center'}}>
                 <span style={{fontSize: '56px'}}>🎉</span>
                 <h2 style={{color: '#0a1f44', fontSize: '28px', fontWeight: '300', marginTop: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Share Testimony</h2>
@@ -58,7 +58,7 @@ export default function Connect() {
 
           {/* Counselling */}
           <a href="/counselling" style={{textDecoration: 'none'}}>
-            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', transition: 'transform 0.3s ease', cursor: 'pointer'}}>
+            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', cursor: 'pointer'}}>
               <div style={{backgroundColor: '#06132e', padding: '40px 24px', textAlign: 'center'}}>
                 <span style={{fontSize: '56px'}}>💬</span>
                 <h2 style={{color: '#c9a84c', fontSize: '28px', fontWeight: '300', marginTop: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Counselling</h2>
@@ -67,6 +67,38 @@ export default function Connect() {
                 <p style={{color: '#555', fontSize: '14px', lineHeight: '1.9', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>Request a private counselling session with one of our pastors. We are here to help.</p>
                 <span style={{backgroundColor: '#06132e', color: 'white', padding: '12px 32px', borderRadius: '4px', fontWeight: '500', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
                   Request Session →
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Departments */}
+          <a href="/departments" style={{textDecoration: 'none'}}>
+            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', cursor: 'pointer'}}>
+              <div style={{backgroundColor: '#0a1f44', padding: '40px 24px', textAlign: 'center'}}>
+                <span style={{fontSize: '56px'}}>🤲</span>
+                <h2 style={{color: '#c9a84c', fontSize: '28px', fontWeight: '300', marginTop: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Join a Department</h2>
+              </div>
+              <div style={{padding: '32px', textAlign: 'center'}}>
+                <p style={{color: '#555', fontSize: '14px', lineHeight: '1.9', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>Serve God with your gifts. Join the Choir, Ushering, Media, IT, Sanitation and more.</p>
+                <span style={{backgroundColor: '#0a1f44', color: 'white', padding: '12px 32px', borderRadius: '4px', fontWeight: '500', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
+                  Get Involved →
+                </span>
+              </div>
+            </div>
+          </a>
+
+          {/* Classes */}
+          <a href="/classes" style={{textDecoration: 'none'}}>
+            <div style={{backgroundColor: 'white', border: '1px solid #e5e5e5', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 2px 16px rgba(0,0,0,0.08)', cursor: 'pointer'}}>
+              <div style={{backgroundColor: '#c9a84c', padding: '40px 24px', textAlign: 'center'}}>
+                <span style={{fontSize: '56px'}}>📖</span>
+                <h2 style={{color: '#0a1f44', fontSize: '28px', fontWeight: '300', marginTop: '16px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Register for a Class</h2>
+              </div>
+              <div style={{padding: '32px', textAlign: 'center'}}>
+                <p style={{color: '#555', fontSize: '14px', lineHeight: '1.9', marginBottom: '24px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>Sign up for upcoming classes including Baptismal Class, Believers Class and more.</p>
+                <span style={{backgroundColor: '#c9a84c', color: '#0a1f44', padding: '12px 32px', borderRadius: '4px', fontWeight: '500', fontSize: '11px', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif'}}>
+                  Register Now →
                 </span>
               </div>
             </div>
