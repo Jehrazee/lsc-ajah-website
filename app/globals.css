@@ -46,13 +46,17 @@ section:nth-child(7) { animation-delay: 1.3s; }
 @media (max-width: 768px) {
   h1 { font-size: 32px !important; }
   h2 { font-size: 26px !important; }
-  section { 
-    padding: 40px 16px !important;
+  section {
     opacity: 0;
     animation: fadeInUp 0.6s ease forwards !important;
   }
   div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   div[style*="display: flex"] { flex-wrap: wrap !important; }
+
+  /* Fix hero sections clashing with fixed navbar on mobile */
+  section:first-of-type {
+    padding-top: 120px !important;
+  }
 }
 
 a:hover { opacity: 0.8; transition: opacity 0.2s ease; }
