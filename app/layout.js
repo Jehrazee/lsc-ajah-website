@@ -20,6 +20,10 @@ export const metadata = {
   },
   description: "Welcome to RCCG Living Seed Church Ajah — a family built on the Word of God, committed to raising disciples and transforming lives in Ajah, Lagos, Nigeria.",
   keywords: ["RCCG", "Living Seed Church", "Ajah", "Lagos", "Church", "Nigeria", "RCCG Ajah", "Christian Church Lagos"],
+  icons: {
+    icon: "/lsc.jpg",
+    apple: "/lsc.jpg",
+  },
   openGraph: {
     title: "RCCG Living Seed Church Ajah",
     description: "A place of grace, growth and genuine worship in Ajah, Lagos, Nigeria.",
