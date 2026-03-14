@@ -51,7 +51,7 @@ export default function Navbar() {
       `}</style>
 
       <nav style={{
-        backgroundColor: scrolled ? '#0a1f44' : 'transparent',
+      backgroundColor: scrolled || menuOpen ? '#0a1f44' : 'transparent',
         color: 'white',
         padding: '16px 24px',
         position: 'fixed',
