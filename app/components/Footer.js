@@ -13,12 +13,13 @@ export default function Footer() {
           <h4 style={{color: 'white', fontSize: '11px', fontWeight: '500', marginBottom: '16px', fontFamily: 'Montserrat, sans-serif', letterSpacing: '3px', textTransform: 'uppercase'}}>Explore</h4>
           <ul style={{listStyle: 'none', padding: 0}}>
             {[
-              ['About', '/about'],
-              ['Sermons', '/sermons'],
-              ['Events', '/events'],
-              ['Leaders', '/leaders'],
-              ['Gallery', '/'],
-            ].map(([label, href]) => (
+  ['About', '/about'],
+  ['Sermons', '/sermons'],
+  ['Events', '/events'],
+  ['Leaders', '/leaders'],
+  ['Tribes', '/tribes'],
+  ['Gallery', '/'],
+].map(([label, href]) => (
               <li key={label} style={{marginBottom: '10px'}}>
                 <a href={href} style={{color: '#cccccc', textDecoration: 'none', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '0.5px'}}>{label}</a>
               </li>
