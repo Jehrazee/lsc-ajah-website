@@ -74,7 +74,7 @@ export default function Navbar() {
           </div>
 
           <ul className="nav-links" style={{gap: '24px', listStyle: 'none', fontSize: '14px', margin: 0, padding: 0}}>
-            {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/prayer', 'Prayer'], ['/give', 'Give'], ['/contact', 'Contact']].map(([href, label]) => (
+            {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/give', 'Give'], ['/connect', 'Connect'], ['/contact', 'Contact']].map(([href, label]) => (
               <li key={href} style={{position: 'relative'}}>
                 <a href={href} style={{
                   color: isActive(href) ? '#c9a84c' : 'white',
@@ -114,7 +114,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="mobile-nav">
             <ul style={{listStyle: 'none', padding: '16px 0 0', margin: 0, display: 'flex', flexDirection: 'column', gap: '16px'}}>
-              {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/prayer', 'Prayer'], ['/give', 'Give'], ['/contact', 'Contact'], ['/live', 'Watch Live']].map(([href, label]) => (
+              {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/give', 'Give'], ['/connect', 'Connect'], ['/contact', 'Contact'], ['/live', 'Watch Live']].map(([href, label]) => (
                 <li key={href}>
                   <a href={href} style={{
                     color: isActive(href) ? '#c9a84c' : 'white',
