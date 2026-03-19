@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <p style={{color: '#cccccc', marginBottom: '8px', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '0.5px'}}>RCCG Living Seed Church Ajah</p>
           <p style={{color: '#cccccc', marginBottom: '8px', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>📍 Ajah, Lagos, Nigeria</p>
-          <p style={{color: '#cccccc', marginBottom: '8px', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>📞 +234 800 000 0000</p>
+          <p style={{color: '#cccccc', marginBottom: '8px', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>📞 +234 903 031 9339</p>
           <p style={{color: '#cccccc', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>✉️ info@livingseedchurchajah.org</p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
               ['Events', '/events'],
               ['Leaders', '/leaders'],
               ['Tribes', '/tribes'],
-              ['Gallery', '/'],
+              ['Gallery', '/gallery'],
             ].map(([label, href]) => (
               <li key={label} style={{marginBottom: '10px'}}>
                 <a href={href} style={{color: '#cccccc', textDecoration: 'none', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '0.5px'}}>{label}</a>
