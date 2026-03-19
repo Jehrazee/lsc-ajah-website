@@ -30,6 +30,14 @@ const leaders = [
   },
 ]
 
+const structure = [
+  { role: "General Overseer", name: "Pastor E.A. Adeboye", level: 0 },
+  { role: "Senior Pastor", name: "Pastor Emmanuel Osas Azenabor", level: 1 },
+  { role: "Associate Pastor", name: "Pastor Oluwapelumi Akinola", level: 2 },
+  { role: "Associate Pastor", name: "Pastor Daniel Akande", level: 2 },
+  { role: "Departments", name: "Choir · Media · Ushering · Protocol · Organising", level: 3 },
+]
+
 export default function Leaders() {
   return (
     <main>
@@ -42,21 +50,67 @@ export default function Leaders() {
         <p style={{color: '#cccccc', marginTop: '16px', fontSize: '15px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', letterSpacing: '1px'}}>Servants of God, committed to leading with love and integrity</p>
       </section>
 
-      {/* Leaders */}
-      <section style={{padding: '80px 24px'}}>
-        <div style={{maxWidth: '1100px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '80px'}}>
-          {leaders.map((leader, index) => (
-            <div key={leader.id} style={{display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap', flexDirection: index % 2 === 0 ? 'row' : 'row-reverse'}}>
-              <div style={{flex: '1', minWidth: '280px'}}>
-                <img src={leader.image} alt={leader.name} style={{width: '100%', borderRadius: '8px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)'}} />
-              </div>
-              <div style={{flex: '2', minWidth: '280px'}}>
-                <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>{leader.role}</p>
-                <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '20px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px', lineHeight: '1.2'}}>{leader.name}</h2>
-                <p style={{fontSize: '15px', lineHeight: '1.9', color: '#444', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>{leader.bio}</p>
-              </div>
+      {/* General Overseer */}
+      <section style={{backgroundColor: '#f9f8f6', padding: '80px 24px'}}>
+        <div style={{maxWidth: '900px', margin: '0 auto', textAlign: 'center'}}>
+          <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>RCCG Worldwide</p>
+          <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '48px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Our General Overseer</h2>
+          <div style={{display: 'flex', gap: '48px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center'}}>
+            <div style={{width: '200px', height: '200px', borderRadius: '50%', backgroundColor: '#0a1f44', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, border: '4px solid #c9a84c'}}>
+              <p style={{color: '#c9a84c', fontSize: '13px', fontFamily: 'Montserrat, sans-serif', fontWeight: '300', textAlign: 'center', padding: '16px', lineHeight: 1.6}}>Photo Coming Soon</p>
             </div>
-          ))}
+            <div style={{textAlign: 'left', maxWidth: '500px'}}>
+              <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>General Overseer, RCCG Worldwide</p>
+              <h3 style={{fontSize: '36px', fontWeight: '300', color: '#0a1f44', marginBottom: '20px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Pastor E.A. Adeboye</h3>
+              <p style={{fontSize: '15px', lineHeight: '1.9', color: '#444', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>
+                Pastor Enoch Adejare Adeboye is the General Overseer of the Redeemed Christian Church of God worldwide. Under his leadership, RCCG has grown to become one of the largest and most influential Christian denominations in the world, with parishes in over 196 countries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Leaders */}
+      <section style={{padding: '80px 24px'}}>
+        <div style={{maxWidth: '1100px', margin: '0 auto'}}>
+          <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', textAlign: 'center', fontFamily: 'Montserrat, sans-serif'}}>LSC Ajah</p>
+          <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '64px', textAlign: 'center', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Local Leadership</h2>
+          <div style={{display: 'flex', flexDirection: 'column', gap: '80px'}}>
+            {leaders.map((leader, index) => (
+              <div key={leader.id} style={{display: 'flex', gap: '60px', alignItems: 'center', flexWrap: 'wrap', flexDirection: index % 2 === 0 ? 'row' : 'row-reverse'}}>
+                <div style={{flex: '1', minWidth: '280px'}}>
+                  <img src={leader.image} alt={leader.name} style={{width: '100%', borderRadius: '8px', boxShadow: '0 8px 32px rgba(0,0,0,0.15)'}} />
+                </div>
+                <div style={{flex: '2', minWidth: '280px'}}>
+                  <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>{leader.role}</p>
+                  <h2 style={{fontSize: '42px', fontWeight: '300', color: '#0a1f44', marginBottom: '20px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px', lineHeight: '1.2'}}>{leader.name}</h2>
+                  <p style={{fontSize: '15px', lineHeight: '1.9', color: '#444', fontFamily: 'Montserrat, sans-serif', fontWeight: '300'}}>{leader.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Org Structure */}
+      <section style={{backgroundColor: '#0a1f44', padding: '80px 24px'}}>
+        <div style={{maxWidth: '700px', margin: '0 auto', textAlign: 'center'}}>
+          <p style={{color: '#c9a84c', fontWeight: '500', fontSize: '12px', textTransform: 'uppercase', letterSpacing: '4px', marginBottom: '8px', fontFamily: 'Montserrat, sans-serif'}}>How We Are Organised</p>
+          <h2 style={{fontSize: '42px', fontWeight: '300', color: '#ffffff', marginBottom: '48px', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '2px'}}>Church Structure</h2>
+          <div style={{display: 'flex', flexDirection: 'column', gap: '4px'}}>
+            {structure.map((item, i) => (
+              <div key={i} style={{
+                backgroundColor: item.level === 0 ? '#c9a84c' : item.level === 1 ? 'rgba(255,255,255,0.12)' : item.level === 2 ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.04)',
+                padding: '20px 32px',
+                marginLeft: `${item.level * 32}px`,
+                borderLeft: item.level > 0 ? '2px solid rgba(201,168,76,0.4)' : 'none',
+                textAlign: 'left',
+              }}>
+                <p style={{color: item.level === 0 ? '#0a1f44' : '#c9a84c', fontSize: '10px', fontWeight: '600', letterSpacing: '2px', textTransform: 'uppercase', fontFamily: 'Montserrat, sans-serif', marginBottom: '4px'}}>{item.role}</p>
+                <p style={{color: item.level === 0 ? '#0a1f44' : '#ffffff', fontSize: '16px', fontWeight: '300', fontFamily: 'Cormorant Garamond, Georgia, serif', letterSpacing: '1px', margin: 0}}>{item.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
