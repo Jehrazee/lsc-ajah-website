@@ -34,16 +34,16 @@ export default function Navbar() {
         }
 
         @keyframes goldGlow {
-  0%   { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
-  50%  { box-shadow: 0 0 25px 10px rgba(201,168,76,1), 0 0 60px 20px rgba(201,168,76,0.5); }
-  100% { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
-}
+          0%   { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
+          50%  { box-shadow: 0 0 25px 10px rgba(201,168,76,1), 0 0 60px 20px rgba(201,168,76,0.5); }
+          100% { box-shadow: 0 0 10px 4px rgba(201,168,76,0.6), 0 0 30px 10px rgba(201,168,76,0.3); }
+        }
 
-.lsc-logo {
-  animation: goldGlow 2s ease-in-out infinite;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
+        .lsc-logo {
+          animation: goldGlow 2s ease-in-out infinite;
+          border-radius: 50%;
+          transition: transform 0.3s ease;
+        }
 
         .lsc-logo:hover {
           transform: scale(1.08);
@@ -51,7 +51,7 @@ export default function Navbar() {
       `}</style>
 
       <nav style={{
-      backgroundColor: scrolled || menuOpen ? '#0a1f44' : 'transparent',
+        backgroundColor: scrolled || menuOpen ? '#0a1f44' : 'transparent',
         color: 'white',
         padding: '16px 24px',
         position: 'fixed',
@@ -81,7 +81,16 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <ul className="nav-links" style={{gap: '24px', listStyle: 'none', fontSize: '14px', margin: 0, padding: 0}}>
-            {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/give', 'Give'], ['/connect', 'Connect'], ['/contact', 'Contact']].map(([href, label]) => (
+            {[
+              ['/', 'Home'],
+              ['/about', 'About'],
+              ['/sermons', 'Sermons'],
+              ['/events', 'Events'],
+              ['/new-here', 'New Here'],
+              ['/give', 'Give'],
+              ['/connect', 'Connect'],
+              ['/contact', 'Contact']
+            ].map(([href, label]) => (
               <li key={href} style={{position: 'relative'}}>
                 <a href={href} style={{
                   color: isActive(href) ? '#c9a84c' : 'white',
@@ -122,7 +131,17 @@ export default function Navbar() {
         {menuOpen && (
           <div className="mobile-nav">
             <ul style={{listStyle: 'none', padding: '16px 0 0', margin: 0, display: 'flex', flexDirection: 'column', gap: '16px'}}>
-              {[['/', 'Home'], ['/about', 'About'], ['/sermons', 'Sermons'], ['/events', 'Events'], ['/give', 'Give'], ['/connect', 'Connect'], ['/contact', 'Contact'], ['/live', 'Watch Live']].map(([href, label]) => (
+              {[
+                ['/', 'Home'],
+                ['/about', 'About'],
+                ['/sermons', 'Sermons'],
+                ['/events', 'Events'],
+                ['/new-here', 'New Here'],
+                ['/give', 'Give'],
+                ['/connect', 'Connect'],
+                ['/contact', 'Contact'],
+                ['/live', 'Watch Live']
+              ].map(([href, label]) => (
                 <li key={href}>
                   <a href={href} style={{
                     color: isActive(href) ? '#c9a84c' : 'white',

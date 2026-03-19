@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import BackToTopWrapper from "./components/BackToTopWrapper";
 import NextTopLoader from "nextjs-toploader";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         />
         {children}
         <BackToTopWrapper />
+        <WhatsAppButton />
       </body>
     </html>
   );
